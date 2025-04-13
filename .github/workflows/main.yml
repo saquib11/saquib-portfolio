@@ -3,29 +3,32 @@ name: Deploy Angular Portfolio
 on:
   push:
     branches:
-      - main  # or master, depending on your default branch
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build Project
         run: npm run build -- --configuration production --base-href=/saquib-portfolio/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/saquib-portfolio  # Adjust this to match your project's output directory
           branch: gh-pages
+          folder: dist/saquib-portfolio
           token: ${{ secrets.GITHUB_TOKEN }}
