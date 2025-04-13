@@ -1,0 +1,13 @@
+<div class="progress-content">
+  <div class="skill-title">{{ progress.skill | uppercase }}</div>
+  <div class="skill-progress">{{ progress.progress }}%</div>
+</div>
+<div class="outer">
+  <div class="inner" [style.width]="progress.progress+'%'"
+  [@progressAnimation]="{
+    value: progress.progress,
+    params: {
+      endPosition: progress.progress - 100
+    }
+  }"></div>
+</div>

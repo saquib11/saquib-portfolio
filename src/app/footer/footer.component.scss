@@ -1,15 +1,9 @@
-
 @import '../../variables.scss';
 
-.header {
+.footer-section {
+  display: flex;
+  justify-content: center;
+  height: 50px;
   background-color: $primary;
   color: $white;
-}
-
-mat-icon {
-  color: $white;
-}
-
-.example-spacer {
-  flex: 1 1 auto;
 }

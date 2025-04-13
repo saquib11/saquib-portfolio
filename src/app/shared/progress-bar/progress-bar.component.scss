@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.outer {
+  background-color: #b2b2b2;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.inner {
+  padding: 6px;
+  background-color: $primary;
+  color: $white;
+  text-align: center;
+}
+
+.progress-content {
+  display: flex;
+  justify-content: space-between;
+  .skill-title, .skill-progress {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}

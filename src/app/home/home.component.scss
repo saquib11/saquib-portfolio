@@ -1,0 +1,117 @@
+@import '../../variables.scss';
+
+.about-me {
+  margin: 10px;
+  box-shadow: 2px 9px 15px silver;
+}
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  .left-cotainer {
+    width: 40%;
+    text-align: center;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+
+    mat-icon {
+      font-size: 1.8rem;
+    }
+  }
+  .right-cotainer {
+    width: 60%;
+    padding: 5px 5px 5px 0;
+    font-size: 1.3rem;
+  }
+}
+
+.mat-mdc-card-content {
+  padding: 0 !important;
+}
+
+.career-highlight {
+  margin: 10px;
+}
+
+.career-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 2px 9px 15px silver;
+  background: $white;
+  h3 {
+    font-size: 1.5rem;
+    margin-left: 20px;
+  }
+}
+
+.skills {
+  margin: 10px;
+
+  .skill-container {
+    background-color: $white;
+    padding: 5px;
+    h3 {
+      border-bottom: 2px solid $primary;
+      padding: 5px 0;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+@media(max-width: 992px) {
+  .left-cotainer {
+    font-size: 1.5rem !important;
+  }
+
+  .right-cotainer {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media(max-width: 768px) {
+  .step-title {
+    font-size: 0.8rem !important;
+  }
+  .step-subtext {
+    font-size: 0.7rem !important;
+  }
+  .paragraph {
+    font-size: 0.9rem !important
+  }
+}
+
+@media(max-width: 425px) {
+  .about-me-container {
+    flex-direction: column !important;
+    .left-cotainer {
+      width: 100% !important;
+      mat-icon {
+        transform: rotate(90deg);
+      }
+    }
+    .right-cotainer {
+      width: 100% !important;
+    }
+    .mat-mdc-card-content {
+      padding: 12px !important
+    }
+  }
+  .paragraph {
+    font-size: 0.9rem !important
+  }
+
+  .step-title {
+    font-size: 0.8rem !important;
+  }
+  .step-subtext {
+    font-size: 0.7rem !important;
+  }
+}

@@ -1,0 +1,126 @@
+<section class="about-me" id="about-me">
+  <mat-card appearance="outlined">
+    <div class="about-me-container">
+      <div class="left-cotainer">
+        <h3>Ahmad Saqib Iqbal <mat-icon color="primary" aria-hidden="false" aria-label="Right arrow alt icon"
+            fontIcon="arrow_right_alt"></mat-icon></h3>
+      </div>
+      <div class="right-cotainer">
+        <mat-card-content>I'm a passionate and detail-oriented Front-End Developer with over 5 years of experience
+          specializing in <strong><code>Angular</code></strong>. I thrive on building dynamic, responsive, and
+          user-centric web applications using modern frameworks and clean, maintainable code.
+
+          My core skillset includes <strong><code>HTML, CSS, SCSS, Bootstrap, JavaScript, TypeScript</code></strong>,
+          and a strong command of <strong><code>>Angular</code></strong> and its ecosystem, including
+          <strong><code>Angular Material</code></strong> and <strong><code>PrimeNG</code></strong>. I have a solid
+          understanding of design systems and component-based architecture, which helps me craft intuitive and scalable
+          UI solutions.
+
+          I'm well-versed in version control with <strong><code>Git</code></strong>, and I've worked efficiently in
+          agile teams using <strong><code>Jira </code></strong>to manage workflows and sprints.
+
+          In addition to my front-end expertise, I also bring in <strong><code>Node.js</code></strong> and
+          <strong><code>MongoDB</code></strong> as secondary skills, giving me a broader perspective on full-stack
+          development and API integration.
+
+          Whether it's refining UI/UX details or collaborating across teams to deliver high-quality products, I'm always
+          eager to learn, adapt, and take on new challenges.</mat-card-content>
+      </div>
+    </div>
+  </mat-card>
+</section>
+
+<section class="career-highlight" id="career-highlights">
+  <div class="career-container">
+
+    <h3>Career Highlights</h3>
+    <mat-stepper headerPosition="top" #stepper orientation="vertical" [selectedIndex]="3">
+      <mat-step [completed]="false">
+        <ng-template matStepLabel>
+          <div class="step-label">
+            <div class="step-title" matTooltip="Angular Intern  | S2P Edutech Pvt Ltd (Nagpur)">Angular Intern  | S2P Edutech Pvt Ltd (Nagpur)</div>
+            <div class="step-subtext">March ‘2019 – May 2019’</div>
+          </div>
+        </ng-template>
+        <ul>
+          <li class="paragraph">Gained proficiency in Angular core concepts such as data binding, two-way data binding,
+            reactive and template-driven forms, directives (built-in and custom), pipes, routing, lazy
+            loading, services, modules, and guards.</li>
+          <li class="paragraph">Developed a project to perform CRUD operations using REST API calls.</li>
+        </ul>
+        <div>
+          <button mat-flat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step [completed]="false">
+        <ng-template matStepLabel>
+          <div class="step-label">
+            <div class="step-title">Angular Developer | S2P Edutech Pvt Ltd (Nagpur)</div>
+            <div class="step-subtext">March ‘2019 – May 2019’</div>
+          </div>
+        </ng-template>
+        <ul>
+          <li class="paragraph">Worked on multiple projects, such as Book My Ground, where users can book available
+            grounds in the city, and Biker Zone, where users can purchase bike-related products like
+            gloves, helmets, and jackets.</li>
+          <li class="paragraph">Created reusable components and services while utilizing Angular core concepts.</li>
+          <li class="paragraph">Developed Angular-based applications, handling API requests and data processing.</li>
+      </ul>
+        <div>
+          <button mat-raised-button matStepperPrevious>Back</button>
+          <button mat-flat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step [completed]="false">
+        <ng-template matStepLabel>
+          <div class="step-label">
+            <div class="step-title">Assistant System Engineer | Tata Consultancy Services (Mumbai) </div>
+            <div class="step-subtext">Oct ‘2020 – May 2022’</div>
+          </div>
+        </ng-template>
+        <ul>
+          <li class="paragraph">Led frontend development for a finance domain client using Angular core concepts.</li>
+          <li class="paragraph">Created a POC and initiated the migration of the application from .NET to Angular 11.</li>
+          <li class="paragraph">Developed reusable components, services, pipes, and directives.</li>
+          <li class="paragraph">Utilized Angular lazy loading to improve performance.</li>
+          <li class="paragraph">Enhanced application performance by 30% by optimizing API calls and reducing DOM
+            manipulations.</li>
+        </ul>
+        <div>
+          <button mat-raised-button matStepperPrevious>Back</button>
+          <button mat-flat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step [completed]="false">
+        <ng-template matStepLabel>
+          <div class="step-label">
+            <div class="step-title">Lead Software Engineer | Persistent Systems LTD. (Nagpur)
+            </div>
+            <div class="step-subtext">May ‘2022 – Present’</div>
+          </div>
+
+        </ng-template>
+        <ul>
+          <li class="paragraph">Leading frontend development for a healthcare domain client using Angular components, services, modules, pipes, and directives.</li>
+          <li class="paragraph">Developing high-quality, scalable, and maintainable web applications.</li>
+          <li class="paragraph">Increased performance by 25% by optimizing API calls and reducing unnecessary requests.</li>
+          <li class="paragraph">Implemented complex
+            parent-child communication in Angular to improve data handling.</li>
+          <li class="paragraph"> Collaborating with backend teams and UX designers to enhance the user experience.</li>
+        </ul>
+        <div>
+          <button mat-raised-button matStepperPrevious>Back</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="skill-container">
+    <h3>Skills</h3>
+    @for(item of skills; track item) {
+      <app-progress-bar [progress]="item"></app-progress-bar>
+    }
+  </div>
+</section>
